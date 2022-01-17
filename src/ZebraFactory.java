@@ -7,4 +7,7 @@ public class ZebraFactory extends AnimalFactory{
     public String getName(){
         return "Zebra";
     }
+    public ZebraFactory createAnimal(){
+        return new ZebraFactory();
+    }
 }

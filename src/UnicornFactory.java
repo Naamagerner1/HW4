@@ -7,4 +7,8 @@ public class UnicornFactory extends AnimalFactory{
     public String getName(){
         return "Unicorn";
     }
+
+    public UnicornFactory createAnimal(){
+        return new UnicornFactory();
+    }
 }

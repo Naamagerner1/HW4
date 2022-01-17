@@ -21,5 +21,5 @@ public abstract class AnimalFactory implements Animal{
             levelOfHunger--;
     }
 
-    createAnimal()
+    public abstract AnimalFactory createAnimal();
 }

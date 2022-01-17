@@ -2,14 +2,21 @@ import java.util.ArrayList;
 
 public class Zoo {
     ArrayList<AnimalFactory> listOfAnimals;
+    private static Zoo instance = null;
 
-    public Zoo(){
+    private Zoo(){
         listOfAnimals = new ArrayList<AnimalFactory>();
     }
 
+    public static Zoo getInstance(){
+        if (instance == null) {
+            instance = new Zoo();
+            System.out.println("Creating zoo...");
+        }
+        else
+            System.out.println("The zoo already exists...");
 
-    public getInstance(){
-
+        return instance;
     }
 
     addObserver()
