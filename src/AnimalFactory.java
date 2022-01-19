@@ -1,13 +1,13 @@
-public abstract class AnimalFactory implements Animal{
-    private int levelOfHappines;
-    private int levelOfHunger;
+public abstract class AnimalFactory {
+    /*protected int levelOfHappines;
+    protected int levelOfHunger;
 
     public AnimalFactory(){
         levelOfHappines = 2;
         levelOfHunger = 3;
     }
 
-    public abstract String getName();
+    //public abstract String getName();
 
     public void performAction(){
         if (levelOfHappines < 5)
@@ -16,10 +16,7 @@ public abstract class AnimalFactory implements Animal{
             levelOfHunger++;
     }
 
-    public void eat(){
-        if (levelOfHunger > 0)
-            levelOfHunger--;
-    }
+    public abstract void eat();*/
 
-    public abstract AnimalFactory createAnimal();
+    public abstract AnimalClass createAnimal();
 }

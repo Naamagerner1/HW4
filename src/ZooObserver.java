@@ -1,18 +1,13 @@
 public class ZooObserver implements ObserverInterface {
     private String name;
     private String desc;
+    //private Zoo subject;
 
     public ZooObserver(String name){
         this.name = name;
     }
-    void update(String update){
-        desc = update;
+    public void update(String desc){
+        this.desc = desc;
         System.out.println("[" + name + "] " + desc);
-    }
-    void addObserver(ZooObserver newObserver){
-
-    }
-    void removeObserver(ZooObserver removeObserver){
-
     }
 }

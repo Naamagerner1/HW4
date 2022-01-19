@@ -4,11 +4,18 @@ public class UnicornFactory extends AnimalFactory{
         super();
     }
 
-    public String getName(){
-        return "Unicorn";
-    }
+    //public String getName(){
+    //    return "Unicorn";
+    //}
 
-    public UnicornFactory createAnimal(){
-        return new UnicornFactory();
+    public Unicorn createAnimal(){
+        return (Unicorn) new Unicorn();
     }
+    /*public void eat(){
+        if (levelOfHunger > 0)
+            levelOfHunger--;
+
+    }*/
+
+
 }

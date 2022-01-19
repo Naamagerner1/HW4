@@ -8,7 +8,7 @@ public class MonkeyFactory extends AnimalFactory{
         return "Monkey";
     }
 
-    public MonkeyFactory createAnimal(){
-        return new MonkeyFactory();
+    public Monkey createAnimal(){
+        return new Monkey();
     }
 }
