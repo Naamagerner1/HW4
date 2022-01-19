@@ -9,6 +9,7 @@ public class MonkeyFactory extends AnimalFactory{
     }
 
     public Monkey createAnimal(){
+        numberOfInstances++;
         return new Monkey();
     }
 }

@@ -8,6 +8,8 @@ public class ZebraFactory extends AnimalFactory{
         return "Zebra";
     }
     public Zebra createAnimal(){
+        numberOfInstances++;
         return new Zebra();
     }
+
 }

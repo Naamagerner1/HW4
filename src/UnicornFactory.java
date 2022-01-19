@@ -9,13 +9,9 @@ public class UnicornFactory extends AnimalFactory{
     //}
 
     public Unicorn createAnimal(){
+        numberOfInstances++;
         return (Unicorn) new Unicorn();
     }
-    /*public void eat(){
-        if (levelOfHunger > 0)
-            levelOfHunger--;
-
-    }*/
 
 
 }

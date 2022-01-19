@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Zoo implements Subject{
     ArrayList<AnimalClass> listOfAnimals;
@@ -26,23 +27,24 @@ public class Zoo implements Subject{
         listOfAnimals.add(newAnimal);
         setDesc(newAnimal.getName() + " has been added to the zoo!");
     }
+    public String FromEnumToNameOfAnimal (AnimalTypes type){
+        String end = type.name().substring(1);
+        end = end.toLowerCase();
+        String name = type.name().substring(0,1) + end;
+        return name;
+    }
 
     public void showAnimalsInfo(){
         int counterMonkey = 0;
         int counterUnicorn = 0;
         int counterZebra = 0;
         String finalString = "The zoo contains total of " + listOfAnimals.size()+ " animals:\n";
-        for (AnimalClass currAnimal : listOfAnimals) {
-            if (currAnimal instanceof Monkey)
-                counterMonkey++;
-            else if (currAnimal instanceof Unicorn)
-                counterUnicorn++;
-            else if (currAnimal instanceof Zebra)
-                counterZebra++;
+
+        for (AnimalTypes curr: AnimalTypes.values()){
+            //String tremp = (AnimalFactory) FromEnumToNameOfAnimal(curr)+ "Factory";
+            //AnimalClass name1= (curr.name())curr;
+            finalString = finalString + "- " + FromEnumToNameOfAnimal(curr)+ ": " + tremp.getNumberOfInstances() + "\n"; ///////////////
         }
-        finalString = finalString + "- Monkey: " + counterMonkey+ "\n" +
-                "- Unicorn: " + counterUnicorn+"\n" +
-                "- Zebra: " + counterZebra +"\n";
         int happiesLevel = listOfAnimals.get(0).levelOfHappines;
         int hungerLevel = listOfAnimals.get(0).levelOfHunger;
         finalString = finalString + "Happiness level: "+ happiesLevel + "\n";
