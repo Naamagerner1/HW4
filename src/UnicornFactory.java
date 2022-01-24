@@ -1,16 +1,10 @@
 public class UnicornFactory extends AnimalFactory{
-
-    public UnicornFactory(){
-        super();
-    }
-
-    //public String getName(){
-    //    return "Unicorn";
-    //}
-
+    /**
+     * Creates new Unicorn
+     * @return The new Unicorn
+     */
     public Unicorn createAnimal(){
-        numberOfInstances++;
-        return (Unicorn) new Unicorn();
+        return new Unicorn();
     }
 
 

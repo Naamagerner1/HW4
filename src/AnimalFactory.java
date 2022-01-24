@@ -1,10 +1,8 @@
 public abstract class AnimalFactory {
-    protected static int numberOfInstances = 0;
-
+    /**
+     * Abstract method - each animal will create new of itself
+     * @return New animal
+     */
     public abstract AnimalClass createAnimal();
-
-    public static int getNumberOfInstances(){
-        return numberOfInstances;
-    }
 
 }

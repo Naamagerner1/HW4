@@ -1,7 +1,9 @@
 public interface Subject {
+    /**
+     * An interface which Zoo is implementing.
+     */
     void addObserver(ZooObserver observer);
     void removeObserver(ZooObserver observer);
     void notifyObservers();
-    //String subjectDetails();
     void setDesc(String desc);
 }
