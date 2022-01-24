@@ -6,7 +6,7 @@ public class Zoo implements Subject{
     ArrayList<AnimalClass> listOfAnimals;
     private static Zoo instance = null;
     private ArrayList<ZooObserver> observers;
-    public static ArrayList<AnimalTypes> listOfTypes;
+    protected static ArrayList<AnimalTypes> listOfTypes;
     private String desc;
 
     /**
